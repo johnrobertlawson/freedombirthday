@@ -1,7 +1,7 @@
 # Modified version of the BlinkyTape Python example code from github.com/Blinkinlabs/BlinkyTape_Python
 # Created by Matt Dyson (mattdyson.org)
 # Version 1.0 (20/12/13)
-
+import pdb
 import serial
 
 class BlinkyTape(object):
@@ -18,6 +18,7 @@ class BlinkyTape(object):
   # Set a specified pixel to a specified RGB value in our buffer. 
   # If final argument==True, then push update to the strip
   def setPixel(self, pixel, r, g, b, autoUpdate=False):
+    # pdb.set_trace()
     self.led[pixel]=[r,g,b]
     if autoUpdate:
        self.sendUpdate()

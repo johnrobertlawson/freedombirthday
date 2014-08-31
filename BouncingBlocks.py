@@ -59,7 +59,7 @@ class Block(object):
       return self.colour
 
 if __name__ == "__main__":
-   serialPorts = glob.glob("/dev/tty.usbm*")
+   serialPorts = glob.glob("/dev/ttyACM*")
    port = serialPorts[0]
 
    bt = BlinkyTape(port)
